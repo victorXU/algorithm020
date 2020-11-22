@@ -77,6 +77,6 @@
 
     都需要加锁
     add==offer==put
-    poll = take=  dequeue
+    poll==take==dequeue
      peek
      remove  
