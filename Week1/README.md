@@ -16,3 +16,14 @@ Deque<String> deque = new LinkedList<>();
   2.分析 Queue 和 Priority Queue 的源码
   
   
+Queue
+        抛异常：add，remove，element
+        返回null：offer，poll，peek
+        
+    队列	                有界性	            锁	       数据结构
+ArrayBlockingQueue	bounded	                加锁	   arraylist
+LinkedBlockingQueue	optionally-bounded	加锁	   linkedlist
+ConcurrentLinkedQueue	unbounded	        无锁	   linkedlist
+LinkedTransferQueue	unbounded		无锁         linkedlist
+PriorityBlockingQueue	unbounded		加锁           heap
+DelayQueue	        unbounded		加锁          heap
