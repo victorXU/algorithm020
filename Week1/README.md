@@ -21,7 +21,8 @@ Queue
         返回null：offer，poll，peek
         
     队列	                有界性	            锁	       数据结构
-ArrayBlockingQueue	bounded	                加锁	   arraylist
+    ArrayBlockingQueue    bounded                加锁        arraylist
+		                	   
 LinkedBlockingQueue	optionally-bounded	加锁	   linkedlist
 ConcurrentLinkedQueue	unbounded	        无锁	   linkedlist
 LinkedTransferQueue	unbounded		无锁         linkedlist
