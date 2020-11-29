@@ -42,11 +42,7 @@ public class CircularQueue<T> implements Deque<T> {
      * @return
      */
     public boolean isEmpty() {
-        if (head == tail) {
-            return true;
-        } else {
-            return false;
-        }
+        return head == tail;
     }
 
     /**
@@ -55,19 +51,12 @@ public class CircularQueue<T> implements Deque<T> {
      * @return
      */
     private boolean isFull() {
-        if ((tail + 1) % n == head) {
-            return true;
-        } else {
-            return false;
-        }
+        return (tail + 1) % n == head;
     }
 
     public void printAll() {
-        System.out.println(Arrays.toString(data)+"head="+head+",tail="+tail);
+        System.out.println(Arrays.toString(data) + "head=" + head + ",tail=" + tail);
     }
-
-
-
 
 
     @Override
@@ -78,9 +67,9 @@ public class CircularQueue<T> implements Deque<T> {
         if (isFull()) {
             return;
         }
-        if (head==0){
-            head=n-1;
-        }else {
+        if (head == 0) {
+            head = n - 1;
+        } else {
             head = head - 1;
         }
         data[head] = t;
@@ -114,10 +103,10 @@ public class CircularQueue<T> implements Deque<T> {
         if (isEmpty()) {
             return null;
         }
-        if (tail==0){
-            tail=n-1;
-        }else {
-            tail = tail-1;
+        if (tail == 0) {
+            tail = n - 1;
+        } else {
+            tail = tail - 1;
         }
         return (T) data[tail];
     }
